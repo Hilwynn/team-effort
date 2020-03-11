@@ -29,6 +29,8 @@ The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](htt
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Notes to Self
+
 - Find the logo Sandra made
 - Recreate the database, but without the party functionality
 - Add functionality for DMs, i.e. ability to save lists of monsters
