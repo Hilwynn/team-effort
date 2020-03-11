@@ -1,0 +1,117 @@
+.spell-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.spell-card {
+  background-color: thistle;
+  border: 1px solid thistle;
+  border-radius: 0.25rem;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 0.25rem 0.5rem;
+  max-width: 340px;
+
+  padding: 0.5rem;
+  width: 100%;
+
+  h3 {
+    background-color: white;
+    border-radius: 0.25rem 0.25rem 0 0;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 0.25rem;
+    padding: 0.25rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    margin: 0;
+    width: 100%;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.spell-card_grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+
+  .spell-card_field {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+    padding: 0.125rem 0.25rem;
+    text-align: center;
+    width: 50%;
+
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(5) {
+      margin-right: 0.25rem;
+      width: calc(50% - 0.25rem);
+    }
+
+    dt {
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.spell-card_materials {
+  font-size: 0.875rem;
+  font-style: italic;
+  padding: 0 0.25rem 0.25rem;
+  width: 100%;
+}
+
+.spell-card_description {
+  background-color: white;
+  border-radius: 0 0 0.25rem 0.25rem;
+  flex: 1;
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  dd {
+    padding: 0.5rem;
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.spell-card_footer {
+  display: flex;
+  font-size: 0.875rem;
+  width: 100%;
+
+  .spell-card_field {
+    width: 50%;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

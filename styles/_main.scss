@@ -1,0 +1,48 @@
+@import "./fonts";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./spells.scss";
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-stack-sans;
+  margin: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+
+.page-title {
+  font-family: $font-stack-serif;
+  font-size: 2rem;
+}
