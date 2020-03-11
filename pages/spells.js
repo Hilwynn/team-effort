@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Page from "../components/Page";
 import { searchSpells } from "../utils/api";
+import { characterClasses } from "../utils/constants";
 import { useDebounce } from "../utils/hooks";
 
 import SpellCard from "../components/SpellCard";
@@ -28,14 +29,6 @@ const Spells = () => {
         onChange={event => setQuery(event.target.value)}
         value={query}
       />
-
-      <ul>
-        <li>Fetch all spells on site/page load and then filter that list??</li>
-        <li>Filter spells by class (selector)</li>
-        <li>Filter spells by level (selector)</li>
-        <li>Option to filter by name and e.g. class?</li>
-        <li>Save lists of spells to LocalStorage?</li>
-      </ul>
 
       <ul className="spell-list">
         {spells.map(spell => (
