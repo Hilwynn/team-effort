@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Page from "../components/Page";
-import { searchSpells } from "../utils/api";
-import { characterClasses } from "../utils/constants";
-import { useDebounce } from "../utils/hooks";
 
+import Page from "../components/Page";
+import SearchInput from "../components/forms/SearchInput";
 import SpellCard from "../components/SpellCard";
+
+import { searchSpells } from "../utils/api";
+import { useDebounce } from "../utils/hooks";
 
 const Spells = () => {
   const [query, setQuery] = useState("");
@@ -21,14 +22,13 @@ const Spells = () => {
     }
   }, [debouncedQuery]);
 
+  function handleChange(event) {
+    setQuery(event.target.value);
+  }
+
   return (
     <Page title="Spells">
-      <label htmlFor="spellSearch">Search:</label>
-      <input
-        id="spellSearch"
-        onChange={event => setQuery(event.target.value)}
-        value={query}
-      />
+      <SearchInput onChange={handleChange} value={query} />
 
       <ul className="spell-list">
         {spells.map(spell => (

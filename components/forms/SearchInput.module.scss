@@ -1,0 +1,18 @@
+.inner-wrapper {
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  input {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.25rem;
+  }
+
+  svg {
+    height: 1rem;
+    left: 0.75rem;
+    position: absolute;
+    width: 1rem;
+  }
+}
