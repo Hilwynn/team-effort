@@ -5,7 +5,7 @@ const Page = ({ children, heading, title }) => {
   return (
     <Fragment>
       <Head>
-        <title>{title} | Team Effort</title>
+        <title>{title ? `${title} | ` : null}Team Effort</title>
       </Head>
       <h2 className="page-title">{heading || title}</h2>
       {children}

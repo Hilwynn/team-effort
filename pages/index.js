@@ -3,7 +3,7 @@ import Page from "../components/Page";
 
 const Home = () => {
   return (
-    <Page title="Home" heading="Welcome home!">
+    <Page heading="Welcome home!">
       <ul>
         <li>Find the logo Sandra made</li>
         <li>Recreate the database, but without the party functionality</li>
